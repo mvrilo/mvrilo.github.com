@@ -1,0 +1,45 @@
+/* 
+Document: style
+Created on: 03/04/2010
+Author: mvrilo
+*/
+
+/* Reset the page */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,input,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:18px;vertical-align:baseline;background:transparent;font-family:helvetica,verdana,arial;color:black;text-decoration:none;}body{line-height:1;}ol,ul{list-style:none;}blockquote,q{quotes:none;}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}:focus{outline:0;}ins{text-decoration:none;}del{text-decoration:line-through;}table{border-collapse:collapse;border-spacing:0;}.clear{clear:both;}.floatLeft{float:left;}.floatRight{float:right;}
+
+/* init */
+body {
+	padding: 40px;
+}
+#top {
+	margin-bottom: 20px;
+}
+h1 {
+	font-family: bitstream charter, times new roman;
+	font-size: 37px;
+}
+span {
+	font-size: 18px;
+	letter-spacing: 10px;
+	color: #DDD;
+}
+p {
+	padding: 5px 0px;
+	font-size: 17px;
+}
+p a {
+	color: #555;
+	font-size: 17px;
+}
+#main {
+	margin-bottom: 15px;;
+}
+#ip {
+	color: #EEE;
+}
+#facebook {
+	margin-left: 30px;
+}
+img {
+	margin-top: 20px;
+}
