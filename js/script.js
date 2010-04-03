@@ -1,3 +1,9 @@
+/*
+Author: Murilo Santana
+Date: 04/03/2010 (mmddyyyy)
+Feel free to use and copy this script
+*/
+
 $(document).ready(function(){
 	$('h1').mouseover(function(){
 		$(this).animate({color:'#d90000'}, 2000);
