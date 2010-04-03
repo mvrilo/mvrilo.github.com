@@ -31,6 +31,9 @@ p a {
 	color: #555;
 	font-size: 17px;
 }
+p a:hover {
+	color: #111;
+}
 #main {
 	margin-bottom: 15px;;
 }
