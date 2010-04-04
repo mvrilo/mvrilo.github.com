@@ -15,6 +15,7 @@ body {
 	margin-bottom: 20px;
 }
 h1 {
+	line-height: 0px;
 	font-family: bitstream charter, times new roman;
 	font-size: 37px;
 }
@@ -35,10 +36,17 @@ p a:hover {
 	color: #111;
 }
 #main {
-	margin-bottom: 15px;;
+	margin-bottom: 15px;
 }
 #ip {
-	color: #EEE;
+	margin-top: 15px;
+}
+#ip a {
+	color: #aaa;
+	font-size: 12px;
+}
+#ip a:hover {
+	color: #888;
 }
 #facebook {
 	margin-left: 30px;
