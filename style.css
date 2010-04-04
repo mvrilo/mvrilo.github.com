@@ -15,11 +15,11 @@ body {
 	margin-bottom: 20px;
 }
 h1 {
-	line-height: 0px;
+	line-height: 20px;
 	font-family: bitstream charter, times new roman;
 	font-size: 37px;
 }
-span {
+#top p {
 	font-size: 18px;
 	letter-spacing: 10px;
 	color: #DDD;
