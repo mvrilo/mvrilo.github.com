@@ -5,7 +5,7 @@ Feel free to use and copy this script
 */
 
 $(document).ready(function(){
-	$('h1').mouseover(function(){
+	$('h1 a').mouseover(function(){
 		$(this).animate({color:'#d90000'}, 2000);
 	}).mouseout(function(){
 		$(this).animate({color:'#11119f'}, 2000);
