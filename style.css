@@ -48,9 +48,6 @@ p a:hover {
 #ip a:hover {
 	color: #888;
 }
-#facebook {
-	margin-left: 30px;
-}
-img {
-	margin-top: 20px;
+#google {
+	margin: 10px 0px 0px 30px;
 }

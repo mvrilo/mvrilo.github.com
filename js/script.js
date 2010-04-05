@@ -6,21 +6,21 @@ Feel free to use and copy this script
 
 $(document).ready(function(){
 	$('h1 a').mouseover(function(){
-		$(this).animate({color:'#d90000'}, 2000);
+		$(this).animate({color:'#d90000'},1000);
 	}).mouseout(function(){
-		$(this).animate({color:'#11119f'}, 2000);
+		$(this).animate({color:'#11119f'},1000);
 	});
 
 	$.ajax({
 		url : 'http://twitter.com/statuses/user_timeline/mvrilo.json?count=2&callback=?',
 		dataType : 'json',
 		success : function(data){
-			$('#twitter').attr('title',data[0].text);
-			$('#twitter').attr('alt',data[0].text);
+			$('#google').attr('title','Last tweet: ' + data[0].text);
+			$('#google').attr('alt','Last tweet: ' + data[0].text);
 		},
 		error : function(){
-			$('#twitter').attr('title','Follow me on Twitter');
-			$('#twitter').attr('alt','Follow me on Twitter');
+			$('#google').attr('title','Check out my profiles');
+			$('#google').attr('alt','Check out my profiles');
 		}
 	});
 
