@@ -11,6 +11,8 @@ $(document).ready(function(){
 		$(this).animate({color:'#11119f'},1000);
 	});
 
+	$('#google').hide().fadeIn(400);
+
 	$.ajax({
 		url : 'http://twitter.com/statuses/user_timeline/mvrilo.json?count=2&callback=?',
 		dataType : 'json',
