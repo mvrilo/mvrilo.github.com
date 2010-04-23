@@ -1,6 +1,5 @@
 /*
 Author: Murilo Santana
-Date: 04/03/2010 (mmddyyyy)
 Feel free to use and copy this script
 */
 
@@ -11,7 +10,25 @@ $(document).ready(function(){
 		$(this).animate({color:'#11119f'},1000);
 	});
 
-	$('#google').hide().fadeIn(400);
+	if (navigator.userAgent.match(/Chrome\/5/gi)){ /*fade bug on Chrome beta <http://dev.jquery.com/ticket/6409>*/
+		$('#google').hide().fadeIn('fast').mouseover(function(){
+			$(this)
+			.animate({marginLeft: "-=5px"}, 50)
+			.animate({marginLeft: "+=5px"}, 50)
+			.animate({marginLeft: "-=5px"}, 50)
+			.animate({marginLeft: "+=5px"}, 50)
+			.animate({marginLeft: "-=5px"}, 50)
+			.animate({marginLeft: "+=5px"}, 50);
+		});
+
+	}
+	else {
+		$('#google').hide().fadeTo('fast', 0.7).mouseover(function(){
+			$(this).stop().animate({opacity:1},'fast');
+		}).mouseout(function(){
+			$(this).stop().animate({opacity:0.7},'fast');
+		});
+	}
 
 	$.ajax({
 		url : 'http://twitter.com/statuses/user_timeline/mvrilo.json?count=2&callback=?',
