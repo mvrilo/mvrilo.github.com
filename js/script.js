@@ -4,13 +4,23 @@ Feel free to use and copy this script
 */
 
 $(document).ready(function(){
+	// target="_blank" hack for xhtml strict
+	$('a').click(function(){
+		if($(this).attr('rel') == 'external'){
+			window.open($(this).attr('href'));
+			return false;
+		}
+	});
+
+	// header effects
 	$('h1 a').mouseover(function(){
 		$(this).animate({color:'#d90000'},1000);
 	}).mouseout(function(){
 		$(this).animate({color:'#11119f'},1000);
 	});
 
-	if (navigator.userAgent.match(/Chrome\/5/gi)){ /*fade bug on Chrome beta <http://dev.jquery.com/ticket/6409>*/
+	// google link effects
+	if (navigator.userAgent.match(/Chrome\/5/gi)){ /*fade bug on Chrome beta for Linux <http://dev.jquery.com/ticket/6409>*/
 		$('#google').hide().fadeIn('fast').mouseover(function(){
 			$(this)
 			.animate({marginLeft: "-=5px"}, 50)
@@ -30,6 +40,7 @@ $(document).ready(function(){
 		});
 	}
 
+	// get tweets
 	$.ajax({
 		url : 'http://twitter.com/statuses/user_timeline/mvrilo.json?count=2&callback=?',
 		dataType : 'json',
@@ -43,6 +54,7 @@ $(document).ready(function(){
 		}
 	});
 
+	// get the ip
 	$.ajax({
 		url : 'http://freegeoip.net/json?callback=?',
 		dataType : 'jsonp',
