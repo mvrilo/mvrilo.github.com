@@ -5,11 +5,9 @@ Feel free to use and copy this script
 
 $(document).ready(function(){
 	// target="_blank" hack for xhtml strict
-	$('a').click(function(){
-		if($(this).attr('rel') == 'external'){
-			window.open($(this).attr('href'));
-			return false;
-		}
+	$("a[rel='external']").click(function(){
+		window.open($(this).attr('href'));
+		return false;
 	});
 
 	// header effects
@@ -59,10 +57,10 @@ $(document).ready(function(){
 		url : 'http://freegeoip.net/json?callback=?',
 		dataType : 'jsonp',
 		success : function(data){
-			$('#ip').find('a').append(data.Ip);
+			$('#ip').find('a').text('your ip: ' + data.Ip);
 		},
 		error : function(){
-			$('#ip').find('a').append('could not obtain address');
+			$('#ip').find('a').text('could not obtain ip address');
 		}
 	});
 });
