@@ -9,15 +9,16 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 
 /* init */
 body {
-	padding: 40px;
+	padding: 30px 30px 0px;
 }
 #top {
 	margin-bottom: 15px;
 }
 h1, h1 a {
 	line-height: 20px;
-	font-family: bitstream charter, times new roman;
-	font-size: 37px;
+	font-weight: normal;
+	font-family: Vollkorn, bitstream charter, times new roman;
+	font-size: 38px;
 }
 #top p {
 	font-size: 18px;
