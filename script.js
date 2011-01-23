@@ -51,16 +51,4 @@ $(document).ready(function(){
 			$('#google').attr('alt','Check out my profiles');
 		}
 	});
-
-	// get the ip
-	$.ajax({
-		url : 'http://freegeoip.net/json?callback=?',
-		dataType : 'jsonp',
-		success : function(data){
-			$('#ip').find('a').text('your ip: ' + data.Ip);
-		},
-		error : function(){
-			$('#ip').find('a').text('could not obtain ip address');
-		}
-	});
 });
